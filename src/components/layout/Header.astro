@@ -12,7 +12,7 @@ const currentPageUrl = Astro.url.pathname;
     <div class="header__main-nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href={(currentPageUrl === '/retrodrop') ? '/' : '#'} class="main-nav__link link link--nav" data-main-nav-item="introduce">
+          <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '/' : '#'} class="main-nav__link link link--nav" data-main-nav-item="introduce">
             {(getLang(currentPageUrl) === 'en') && ('Introduce')}
             {(getLang(currentPageUrl) === 'ru') && ('Встречайте')}
             {(getLang(currentPageUrl) === 'ua') && ('Зустрічайте')}
@@ -20,12 +20,12 @@ const currentPageUrl = Astro.url.pathname;
           </a>
         </li>
         <!-- <li class="main-nav__item">
-          <a href={(currentPageUrl === '/retrodrop') ? '/retrodrop' : '#retrodrop'} class={`main-nav__link link link--nav ${(currentPageUrl === '/retrodrop') ? '_active' : ''}`} data-main-nav-item="retrodrop">
+          <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '/retrodrop' : '#retrodrop'} class={`main-nav__link link link--nav ${(currentPageUrl === '/retrodrop') ? '_active' : ''}`} data-main-nav-item="retrodrop">
             Retrodrop
           </a>
         </li> -->
         <li class="main-nav__item">
-          <a href={(currentPageUrl === '/retrodrop') ? '/#roadmap' : '#roadmap'} class="main-nav__link link link--nav" data-main-nav-item="roadmap">
+          <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '/#roadmap' : '#roadmap'} class="main-nav__link link link--nav" data-main-nav-item="roadmap">
             {(getLang(currentPageUrl) === 'en') && ('Roadmap')}
             {(getLang(currentPageUrl) === 'ru') && ('Дорожная карта')}
             {(getLang(currentPageUrl) === 'ua') && ('Дорожня карта')}
