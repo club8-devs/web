@@ -5,26 +5,26 @@ import { Sprite } from 'astro-icon';
 <div class="score score--offset-bottom">
   <h3 class="score__title">Retro Score</h3>
 
-  <table class="score__table">
-    <tr class="score__item">
-      <th class="score__label">Anon numbers</th>
-      <th class="score__label">Reward</th>
-    </tr>
-    <tr class="score__item" data-retro-box>
-      <td class="score__value">no</td>
-      <td class="score__value">
+  <div class="score__table">
+    <div class="score__item">
+      <div class="score__label">Anon numbers</div>
+      <div class="score__label">Reward</div>
+    </div>
+    <div class="score__item" data-retro-box>
+      <div class="score__value">no</div>
+      <div class="score__value">
         <Sprite name="box" class="score__icon" />
         Box
-      </td>
-    </tr>
-    <tr class="score__item" data-retro-pass>
-      <td class="score__value">yes</td>
-      <td class="score__value">
+      </div>
+    </div>
+    <div class="score__item" data-retro-pass>
+      <div class="score__value">yes</div>
+      <div class="score__value">
         <Sprite name="pass" class="score__icon" />
         Pass
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+  </div>
 
   <table class="score__table">
     <tr class="score__item">

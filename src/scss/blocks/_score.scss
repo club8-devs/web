@@ -41,14 +41,21 @@
 
   &__item {
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    align-items: center;
+    width: 100%;
+
+    &:first-child {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #292929;
+    }
 
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       border-radius: 20px;
       border: 1.5px solid transparent;
       background: linear-gradient(214.93deg, #7A55E3 2.88%, rgba(255, 186, 171, 0.34) 29.67%, rgba(56, 63, 130, 0.19) 49.67%, rgba(249, 227, 176, 0.35) 73.72%, rgba(151, 71, 255, 0.7) 96.9%) border-box;
@@ -96,11 +103,11 @@
 
   &__label {
     color: #9f9f9f;
-    border-bottom: 1px solid #292929;
     padding-bottom: 4px;
     @include font(16px, 1.2, 700);
 
     @include media-breakpoint-up(md) {
+      padding-bottom: 12px;
       @include font(18px, 1.2, 700);
     }
 
@@ -130,14 +137,20 @@
     @include font(14px, 1.2, 500);
 
     @include media-breakpoint-up(md) {
+      padding-top: 14px;
+      padding-bottom: 14px;
       @include font(17px, 1.2, 500);
     }
 
     @include media-breakpoint-up(xl) {
+      padding-top: 16px;
+      padding-bottom: 16px;
       @include font(21px, 1.2, 500);
     }
 
     @include media-breakpoint-up(xxl) {
+      padding-top: 18px;
+      padding-bottom: 18px;
       @include font(23px, 1.2, 500);
     }
 
@@ -156,5 +169,19 @@
     height: 24px;
     vertical-align: middle;
     margin-right: 8px;
+    position: relative;
+    top: -1px;
+
+    @include media-breakpoint-up(xl) {
+      top: -2px;
+      width: 30px;
+      height: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      top: -2px;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
