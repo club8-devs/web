@@ -19,11 +19,11 @@ const currentPageUrl = Astro.url.pathname;
             {(getLang(currentPageUrl) === 'cn') && ('介紹')}
           </a>
         </li>
-        <!-- <li class="main-nav__item">
+        <li class="main-nav__item">
           <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '/retrodrop' : '#retrodrop'} class={`main-nav__link link link--nav ${(currentPageUrl === '/retrodrop') ? '_active' : ''}`} data-main-nav-item="retrodrop">
             Retrodrop
           </a>
-        </li> -->
+        </li>
         <li class="main-nav__item">
           <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '/#roadmap' : '#roadmap'} class="main-nav__link link link--nav" data-main-nav-item="roadmap">
             {(getLang(currentPageUrl) === 'en') && ('Roadmap')}
