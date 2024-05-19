@@ -5,9 +5,7 @@
   --layout-max-width: 1920px;
   --layout-section-vspace: var(--root-section-vspace);
 
-  background: linear-gradient(180deg, #242424 0%, #0C0C0C 38.5%, #000000 100%);
-  color: var(--layout-color);
-  font-family: var(--root-font-family-base);
+  
 
   &__body {
     display: grid;
@@ -17,9 +15,28 @@
     margin-left: auto;
     margin-right: auto;
     padding: 40px 0;
+    background: linear-gradient(180deg, #242424 0%, #0C0C0C 38.5%, #000000 100%);
+    color: var(--layout-color);
+    font-family: var(--root-font-family-base);
 
     @include media-breakpoint-up(xl) {
       padding: 60px 0;
+    }
+
+    &._retrodrop {
+      background-color: #000000;
+      background-image: url('/src/assets/images/retro/retro.webp');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+
+      @include media-breakpoint-up(md) {
+        background-image: url('/src/assets/images/retro/retro-md.webp');
+      }
+
+      @include media-breakpoint-up(xl) {
+        background-image: url('/src/assets/images/retro/retro-xl.webp');
+      }
     }
   }
 

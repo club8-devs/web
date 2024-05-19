@@ -2,8 +2,9 @@ export default function setNavActiveState() {
   const elements = document.querySelectorAll('[data-nav-section]');
   const mainNavElements = document.querySelectorAll('[data-main-nav-item]');
   const activeState = '_active';
+  const isHome = document.getElementsByTagName('body')[0].classList.contains('_home');
 
-  if(!elements) {
+  if(!elements || !isHome) {
     return;
   }
 

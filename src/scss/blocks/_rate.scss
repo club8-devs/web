@@ -1,0 +1,73 @@
+.rate {
+  display: flex;
+  gap: 2px;
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+
+    ._retro-level-bronze & {
+      color: var(--root-color-level-bronze);
+
+      &:nth-child(n+2) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-silver & {
+      color: var(--root-color-level-silver);
+
+      &:nth-child(n+3) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-gold & {
+      color: var(--root-color-level-gold);
+
+      &:nth-child(n+4) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-platinum & {
+      color: var(--root-color-level-platinum);
+
+      &:nth-child(n+5) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-sapphire & {
+      color: var(--root-color-level-sapphire);
+
+      &:nth-child(n+6) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-emerald & {
+      color: var(--root-color-level-emerald);
+
+      &:nth-child(n+7) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-ruby & {
+      color: var(--root-color-level-ruby);
+
+      &:nth-child(n+8) {
+        opacity: 0.5;
+      }
+    }
+
+    ._retro-level-diamond & {
+      color: var(--root-color-level-diamond);
+
+      &:nth-child(n+9) {
+        opacity: 0.5;
+      }
+    }
+  }
+}

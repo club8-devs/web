@@ -1,0 +1,30 @@
+.form {
+  display: grid;
+  gap: 18px;
+
+  @include media-breakpoint-up(md) {
+    gap: 24px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    gap: 32px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--offset-bottom {
+    margin-bottom: 86px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 100px;
+    }
+  }
+}

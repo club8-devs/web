@@ -1,0 +1,12 @@
+---
+export function isHome(currentPageUrl: string): boolean {
+  let isHome: boolean = false;
+
+  if (currentPageUrl === '/' || currentPageUrl === '/ru/' || currentPageUrl === '/ua/' || currentPageUrl === '/cn/') {
+    isHome = true;
+  }
+
+  return isHome;
+}
+---
+

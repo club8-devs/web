@@ -15,8 +15,8 @@
     height: 45px;
 
     @include media-breakpoint-up(xxl) {
-      width: 192px;
-      height: 65px;
+      width: 152px;
+      height: auto;
     }
   }
 }

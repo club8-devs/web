@@ -1,0 +1,42 @@
+---
+import { Sprite } from 'astro-icon';
+
+---
+<div class="status">
+
+  <div class="wallet">
+    <Sprite name="msg" class="wallet__icon wallet__icon--msg" />
+    <Sprite name="mark" class="wallet__icon" />
+    <div class="wallet__title" data-retro-wallet-name></div>
+    <button class="wallet__close" data-retro-wallet-close>
+      <Sprite name="close" class="wallet__close-icon" />
+    </button>
+  </div>
+
+  <div class="msg msg--offset-bottom">
+    <div class="msg__title">Not enough ANON</div>
+    <div class="msg__content">
+      <p class="text">Has not eligible, because you didn&rsquo;t hold at&nbsp;least 888&nbsp;anon.</p>
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <div class="info-panel__label">Status</div>
+    <div class="info-panel__rate rate">
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+      <Sprite name="star" class="rate__icon" />
+    </div>
+    <div class="info-panel__level"></div>
+  </div>
+
+  <div class="info-panel">
+    <div class="info-panel__label">Donate snapshot (USD₮)</div>
+    <div class="info-panel__value" data-retro-donated></div>
+  </div>
+</div>

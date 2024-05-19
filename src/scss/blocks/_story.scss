@@ -1,0 +1,76 @@
+.story {
+  --story-sub-title-color: var(--root-color-primary-soft-light);
+  --story-total-color: var(--root-color-secondary);
+
+  display: grid;
+  gap: 20px;
+
+  @include media-breakpoint-up(md) {
+    gap: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    gap: 26px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 40px;
+  }
+
+
+  &__list {
+    display: grid;
+    gap: 54px;
+
+
+    @include media-breakpoint-up(lg) {
+      gap: 60px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 80px;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__sub-title {
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: var(--story-sub-title-color);
+    @include font(14px, 1.2, 700);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 6px;
+      @include font(18px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(20px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(24px, 1.2, 700);
+    }
+  }
+
+  &__total {
+    color: var(--story-total-color);
+    @include font(22px, 1.2, 800);
+
+    @include media-breakpoint-up(md) {
+      @include font(24px, 1.2, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(30px, 1.2, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(40px, 1.2, 400, $second-font-family);
+    }
+  }
+}

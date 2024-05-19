@@ -1,0 +1,43 @@
+.input {
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 999px;
+  padding: 14px 20px;
+  color: #fff;
+  @include font(16px, 1, 500);
+
+  @include media-breakpoint-up(md) {
+    padding: 20px;
+    @include font(20px, 1, 500);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 25px 20px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 32px 20px;
+    @include font(28px, 1, 500);
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba(3, 135, 130, 0.5);
+    transition-property: box-shadow;
+    transition-duration: var(--root-animation-duration);
+  }
+
+  &--wallet {
+    width: 100%;
+    max-width: 490px;
+    text-align: center;
+    font-family: monospace;
+
+    @include media-breakpoint-up(md) {
+      max-width: 600px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 850px;
+    }
+  }
+}

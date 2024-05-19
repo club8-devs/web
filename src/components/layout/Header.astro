@@ -5,21 +5,27 @@ import { getLang } from '@utils/GetLang.astro';
 import { Sprite } from 'astro-icon';
 
 const currentPageUrl = Astro.url.pathname;
+
 ---
 <div class="layout__header header">
   <div class="header__actions">
     <div class="header__main-nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link link link--nav" data-main-nav-item="introduce">
+          <a href={(currentPageUrl === '/retrodrop') ? '/' : '#'} class="main-nav__link link link--nav" data-main-nav-item="introduce">
             {(getLang(currentPageUrl) === 'en') && ('Introduce')}
             {(getLang(currentPageUrl) === 'ru') && ('Встречайте')}
             {(getLang(currentPageUrl) === 'ua') && ('Зустрічайте')}
             {(getLang(currentPageUrl) === 'cn') && ('介紹')}
           </a>
         </li>
+        <!-- <li class="main-nav__item">
+          <a href={(currentPageUrl === '/retrodrop') ? '/retrodrop' : '#retrodrop'} class={`main-nav__link link link--nav ${(currentPageUrl === '/retrodrop') ? '_active' : ''}`} data-main-nav-item="retrodrop">
+            Retrodrop
+          </a>
+        </li> -->
         <li class="main-nav__item">
-          <a href="#roadmap" class="main-nav__link link link--nav" data-main-nav-item="roadmap">
+          <a href={(currentPageUrl === '/retrodrop') ? '/#roadmap' : '#roadmap'} class="main-nav__link link link--nav" data-main-nav-item="roadmap">
             {(getLang(currentPageUrl) === 'en') && ('Roadmap')}
             {(getLang(currentPageUrl) === 'ru') && ('Дорожная карта')}
             {(getLang(currentPageUrl) === 'ua') && ('Дорожня карта')}
@@ -51,7 +57,7 @@ const currentPageUrl = Astro.url.pathname;
       </ul>
     </div>
     <div class="header__lang">
-      <LangSwitcher />
+      {(currentPageUrl !== '/retrodrop') && <LangSwitcher />}
     </div>
   </div>
   <div class="header__logo">

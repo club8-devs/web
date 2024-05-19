@@ -5,6 +5,7 @@ import Footer from '@components/layout/Footer.astro';
 import { Sprite } from 'astro-icon';
 
 import { getLang } from '@utils/GetLang.astro';
+import { isHome } from '@utils/IsHome.astro';
 
 const currentPageUrl = Astro.url.pathname;
 
@@ -35,16 +36,17 @@ const { title } = Astro.props;
     <meta name="format-detection" content="telephone=no">
     <meta property="og:image" content="/public/anon.png"/>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPZP2FGV3R"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-ZPZP2FGV3R');
-  </script>
-  <body class="layout__body">
+  <body class={`_retro-level-bronze _retro-box _retro-hold-raffle _retro-hold-2 _retro-donate-3 layout__body ${(isHome(currentPageUrl) ? '_home' : '')} ${(currentPageUrl === '/retrodrop' ? '_retrodrop' : '')}`}>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPZP2FGV3R"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZPZP2FGV3R');
+    </script>
     <Sprite.Provider />
     <Header />
     <main class="layout__main">

@@ -6,11 +6,11 @@
     gap: 4px;
 
     @include media-breakpoint-up(lg) {
-      gap: 30px;
+      gap: 20px;
     }
 
-    @include media-breakpoint-up(xl) {
-      gap: 80px;
+    @include media-breakpoint-up(xxxl) {
+      gap: 40px;
     }
   }
 
@@ -31,14 +31,9 @@
       height: 32px;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(4xl) {
       width: 40px;
       height: 40px;
-    }
-
-    @include media-breakpoint-up(4xl) {
-      width: 48px;
-      height: 48px;
     }
   }
 }

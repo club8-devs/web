@@ -1,0 +1,16 @@
+.status {
+  display: grid;
+  gap: 20px;
+
+  @include media-breakpoint-up(md) {
+    gap: 26px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 30px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    gap: 40px;
+  }
+}

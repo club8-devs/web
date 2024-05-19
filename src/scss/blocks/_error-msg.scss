@@ -1,0 +1,24 @@
+.error-msg {
+  padding: 8px;
+  display: none;
+  color: #3bc3bc;
+
+  ._error + & {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      padding: 12px;
+      @include font(20px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 16px;
+      @include font(26px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 20px;
+      @include font(28px, 1.2, 600);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-
+import Story from '@components/Story.astro';
+import { Sprite } from 'astro-icon';
 const pageTitle = "ANON";
 ---
 
@@ -86,8 +87,23 @@ const pageTitle = "ANON";
     </div>
   </div>
 
-  <section id="roadmap" class="layout__section seciton" data-nav-section>
-    <h2 class="seciton__title">Дорожня карта</h2>
+  <!-- <section id="retrodrop" class="layout__section section" data-nav-section>
+    <Sprite name="logo" class="section__logo" />
+    <h2 class="section__title section__title--intro">UPGRADE ANON <span class="section__title-sub">Tokenomics Retrodrop</span></h2>
+
+    <p class="section__intro text text--offset-bottom">Exclusive SBTs await each participant who meets the terms of&nbsp;our program. Check your eligible.</p>
+    <p class="section__intro section__intro--offset-bottom text">
+      <a href="/retrodrop" class="btn btn--wide">Check your status</a>
+    </p>
+
+    <div class="content">
+      <Story />
+    </div>
+
+  </section> -->
+
+  <section id="roadmap" class="layout__section section" data-nav-section>
+    <h2 class="section__title">Дорожня карта</h2>
 
     <div class="tabs">
       <dl class="tabs__body">
@@ -124,7 +140,7 @@ const pageTitle = "ANON";
                 Співпраця з іншими проектами на блокчейні TON
                 <ul class="check-list__list">
                   <li class="check-list__item _done">
-                    Minor Open League Challenge
+                    Minor Open level Challenge
                   </li>
                   <li class="check-list__item _done">
                     Партнерство $ANON та TON FISH

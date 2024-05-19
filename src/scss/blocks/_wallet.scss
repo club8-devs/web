@@ -1,0 +1,108 @@
+.wallet {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    gap: 12px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 16px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    @include media-breakpoint-up(md) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 40px;
+      height: 40px;
+    }
+
+    ._retro-not-eligible & {
+      display: block;
+    }
+  }
+
+  &__icon--msg {
+    display: none;
+  }
+
+  ._retro-not-eligible &__icon--msg {
+    display: block;
+  }
+
+  ._retro-not-eligible &__icon--msg + &__icon {
+    display: none;
+  }
+
+  &__close {
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    background-color: transparent;
+
+    @include hover {
+
+      .wallet__close-icon {
+        color: #fff;
+      }
+    }
+  }
+
+  &__title {
+    @include font(14px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(xsm) {
+      @include font(16px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include font(22px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(26px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(30px, 1, 400, $second-font-family);
+    }
+  }
+
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+    color: #565656;
+    transition-property: color;
+    transition-duration: var(--root-animation-duration-slow);
+
+    @include media-breakpoint-up(sm) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 44px;
+      height: 44px;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}

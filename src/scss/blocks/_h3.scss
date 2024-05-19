@@ -1,0 +1,23 @@
+.h3 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  @include font(22px, 1.2, 700);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 20px;
+    @include font(26px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 24px;
+    @include font(32px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include font(40px, 1.2, 700);
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

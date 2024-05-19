@@ -9,24 +9,24 @@
     -moz-hyphens: auto;
     hyphens: auto;
     margin-bottom: 74px;
-    @include font(38px, 1.06, 600);
+    @include font(38px, 1.06, 700);
 
     @include media-breakpoint-up(sm) {
-      @include font(54px, 1.06, 600);
+      @include font(54px, 1.06, 700);
     }
 
     @include media-breakpoint-up(md) {
-      @include font(90px, 1.06, 600);
+      @include font(90px, 1.06, 700);
       margin-bottom: 100px;
     }
 
     @include media-breakpoint-up(lg) {
-      @include font(100px, 1.06, 600);
+      @include font(100px, 1.06, 700);
     }
 
     @include media-breakpoint-up(xl) {
       margin-bottom: 130px;
-      @include font(124px, 1.06, 600);
+      @include font(124px, 1.06, 700);
     }
   }
 

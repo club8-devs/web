@@ -1,0 +1,40 @@
+.text {
+  --text-color: var(--root-color-text-loss);
+  --text-express-color: var(--root-color-secondary);
+
+  color: var(--text-color);
+  @include font(20px, 1.4, 500);
+
+  @include media-breakpoint-up(sm) {
+    @include font(24px, 1.4, 500);
+  }
+
+  &__icon {
+    position: relative;
+    top: 4px;
+
+    @include media-breakpoint-up(md) {
+      top: 2px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: 6px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      top: 10px;
+    }
+  }
+
+  &--express {
+    color: var(--text-express-color);
+  }
+
+  &--offset-bottom {
+    margin-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 30px;
+    }
+  }
+}

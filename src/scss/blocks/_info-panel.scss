@@ -1,0 +1,131 @@
+.info-panel {
+  background-color: rgba(255 255 255 / 8%);
+  position: relative;
+  border-radius: 20px;
+  padding: 16px 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(278.19deg, #FFFFFF 0.84%, rgba(200, 200, 200, 0.2) 15.78%, rgba(187, 187, 187, 0.4) 43.33%, rgba(200, 200, 200, 0.2) 80.22%, #FFFFFF 94.22%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+
+  ._retro-not-eligible & {
+    display: none;
+  }
+
+  &__label {
+    color: #868686;
+    margin-bottom: 8px;
+    @include font(16px, 1);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+      @include font(18px, 1);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 12px;
+      @include font(22px, 1);
+    }
+  }
+
+  &__rate {
+    margin-bottom: 8px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__level {
+    text-transform: uppercase;
+
+    ._retro-level-bronze & {
+      color: var(--root-color-level-bronze);
+
+      &::before {
+        content: 'Bronze';
+      }
+    }
+
+    ._retro-level-silver & {
+      color: var(--root-color-level-silver);
+
+      &::before {
+        content: 'Silver';
+      }
+    }
+
+    ._retro-level-gold & {
+      color: var(--root-color-level-gold);
+
+      &::before {
+        content: 'Gold';
+      }
+    }
+
+    ._retro-level-platinum & {
+      color: var(--root-color-level-platinum);
+
+      &::before {
+        content: 'Platinum';
+      }
+    }
+
+    ._retro-level-sapphire & {
+      color: var(--root-color-level-sapphire);
+
+      &::before {
+        content: 'Sapphire';
+      }
+    }
+
+    ._retro-level-emerald & {
+      color: var(--root-color-level-emerald);
+
+      &::before {
+        content: 'Emerald';
+      }
+    }
+
+    ._retro-level-ruby & {
+      color: var(--root-color-level-ruby);
+
+      &::before {
+        content: 'Ruby';
+      }
+    }
+
+    ._retro-level-diamond & {
+      color: var(--root-color-level-diamond);
+
+      &::before {
+        content: 'Diamond';
+      }
+    }
+  }
+
+  &__level,
+  &__value {
+    @include font(14px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(md) {
+      @include font(18px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(24px, 1, 400, $second-font-family);
+    }
+  }
+}
+

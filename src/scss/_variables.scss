@@ -15,6 +15,7 @@ $grid-breakpoints: (
   6xl: 1850px,
 );
 $basic-font-family: 'Inter', sans-serif;
+$second-font-family: 'Krona One', sans-serif;
 $animation-speed: 300ms;
 $animation-function: ease;
 $page-max-width: 1200px;
@@ -23,6 +24,7 @@ $page-max-width: 1200px;
   // Light Theme Colors
   --root-color-primary: #000;
   --root-color-primary-soft: #373737;
+  --root-color-primary-soft-light: #5E5E5E;
   --root-color-primary-help: #1B1B1B;
   --root-color-primary-accent: #100b11;
   --root-color-secondary: #fff;
@@ -32,8 +34,21 @@ $page-max-width: 1200px;
   --root-color-text-disabled-second: #606060;
   --root-color-hover-bg: rgba(22 21 21 / 14.5%);
 
+  --root-color-system-active: var(--root-color-accent-help);
+
+  // Retro Status
+  --root-color-level-bronze: #f49a7a;
+  --root-color-level-silver: #b6b6b6;
+  --root-color-level-gold: #ffde37;
+  --root-color-level-platinum: #eee4d5;
+  --root-color-level-sapphire: #74a7ff;
+  --root-color-level-emerald: #92f042;
+  --root-color-level-ruby: #ff7469;
+  --root-color-level-diamond: #1dead1;
+
   // text-colors
   --root-color-text: var(--root-color-secondary);
+  --root-color-text-loss: #9f9f9f;
 
   // link-colors
   --root-color-link: var(--root-color-secondary);
@@ -49,6 +64,7 @@ $page-max-width: 1200px;
 
   // Font
   --root-font-family-base: 'Inter', sans-serif;
+  --root-font-family-second: 'Krona One', sans-serif;
 
   // Animations
   --root-animation-delay: 0.15s;
@@ -57,7 +73,7 @@ $page-max-width: 1200px;
   --root-animation-duration-fast: 0.2s;
 
   // Dimentions
-  --root-side-gap: 16px;
+  --root-side-gap: 24px;
 
   @include media-breakpoint-up(sm) {
     --root-side-gap: 40px;

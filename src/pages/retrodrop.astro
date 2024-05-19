@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Story from '@components/Story.astro';
+import RetroHero from '@components/RetroHero.astro';
+import ScoreTable from '@components/ScoreTable.astro';
+import RetroStatus from '@components/RetroStatus.astro';
+import { Sprite } from 'astro-icon';
+
+const pageTitle = "ANON";
+---
+
+<BaseLayout title={pageTitle}>
+  <div class="layout__section section">
+    <Sprite name="mark" style="display: none;" />
+    <Sprite name="logo" class="section__logo" />
+    <h2 class="section__title section__title--intro">UPGRADE ANON <span class="section__title-sub">Tokenomics Retrodrop</span></h2>
+
+    <div class="retro-check _active" data-retro-check>
+
+      <p class="section__intro text text--offset-bottom">Exclusive SBTs await each participant who meets the terms of&nbsp;our program. Check your eligible.</p>
+      <p class="section__intro text text--offset-bottom text--express">
+        Check your status. Enter&nbsp;your&nbsp;wallet
+      </p>
+
+      <div class="form form--offset-bottom">
+        <div class="form__item">
+          <input id="wallet" type="text" class="form__input input input--wallet">
+          <div class="error-msg">Sorry, there is&nbsp;no&nbsp;such wallet in&nbsp;the database</div>
+        </div>
+        <div class="form__item">
+          <button id="wallet-button" class="btn btn--wide" disabled>
+            <div class="btn__loader"></div>
+            Check
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="retro-results" data-retro-results>
+
+      <div class="content">
+
+        <RetroStatus />
+        <RetroHero />
+        <ScoreTable />
+        <Story />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</BaseLayout>

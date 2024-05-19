@@ -1,0 +1,341 @@
+@keyframes floatUpDown {
+
+  0% {
+    transform: translate(-50%, 0); /* Начальное состояние (парит на месте) */
+  }
+  50% {
+    transform: translate(-50%, -8px); /* Промежуточное состояние (парит вверх) */
+  }
+  100% {
+    transform: translate(-50%, 0); /* Конечное состояние (парит вниз) */
+  }
+}
+
+.retro-hero {
+
+  ._retro-not-eligible & {
+    display: none;
+  }
+
+  &--offset-bottom {
+    margin-bottom: 112px;
+  }
+
+  &__back {
+    background-size: cover;
+
+    ._retro-pass & {
+      aspect-ratio: 419/252;
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box & {
+      aspect-ratio: 616/354;
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp')
+      );
+    }
+  }
+
+  &__front {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1/1;
+    background-size: cover;
+    animation: floatUpDown 4s ease infinite;
+
+    ._retro-box & {
+      top: 6%;
+      width: 72%;
+    }
+
+    ._retro-pass & {
+      top: 16%;
+      width: 56%;
+    }
+
+    // Passes
+
+    ._retro-pass._retro-level-bronze & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-silver & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-silver.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-silver.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-gold & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-gold.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-gold.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-platinum & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-platinum.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-platinum.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-sapphire & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-sapphire.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-sapphire.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-emerald & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-emerald.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-emerald.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-ruby & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-ruby.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp')
+      );
+    }
+
+    ._retro-pass._retro-level-diamond & {
+      background-image: image-set(
+        url('/src/assets/images/retro/pass/pass-diamond.avif') type('image/avif'),
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp')
+      );
+    }
+
+    // Boxes
+
+    ._retro-box._retro-level-bronze & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-silver & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-gold & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-platinum & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-sapphire & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-emerald & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-ruby & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp')
+      );
+    }
+
+    ._retro-box._retro-level-diamond & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif'),
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp')
+      );
+    }
+  }
+
+  &__pic {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    max-width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    @include font(22px, 1.2, 700);
+
+    @include media-breakpoint-up(md) {
+      max-width: 290px;
+      margin-bottom: 26px;
+      @include font(26px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 300px;
+      margin-bottom: 30px;
+      @include font(30px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 440px;
+      margin-bottom: 40px;
+      @include font(40px, 1.2, 700);
+    }
+  }
+
+  &__level {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(22px, 1, 400, $second-font-family);
+
+    @include media-breakpoint-up(md) {
+      @include font(36px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(40px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(50px, 1, 400, $second-font-family);
+    }
+
+    ._retro-level-bronze & {
+      color: var(--root-color-level-bronze);
+
+      &::before {
+        content: 'Bronze';
+      }
+    }
+
+    ._retro-level-silver & {
+      color: var(--root-color-level-silver);
+
+      &::before {
+        content: 'Silver';
+      }
+    }
+
+    ._retro-level-gold & {
+      color: var(--root-color-level-gold);
+
+      &::before {
+        content: 'Gold';
+      }
+    }
+
+    ._retro-level-platinum & {
+      color: var(--root-color-level-platinum);
+
+      &::before {
+        content: 'Platinum';
+      }
+    }
+
+    ._retro-level-sapphire & {
+      color: var(--root-color-level-sapphire);
+
+      &::before {
+        content: 'Sapphire';
+      }
+    }
+
+    ._retro-level-emerald & {
+      color: var(--root-color-level-emerald);
+
+      &::before {
+        content: 'Emerald';
+      }
+    }
+
+    ._retro-level-ruby & {
+      color: var(--root-color-level-ruby);
+
+      &::before {
+        content: 'Ruby';
+      }
+    }
+
+    ._retro-level-diamond & {
+      color: var(--root-color-level-diamond);
+
+      &::before {
+        content: 'Diamond';
+      }
+    }
+
+
+    ._retro-pass & {
+
+      &::after {
+        content: ' pass';
+      }
+    }
+
+    ._retro-box & {
+
+      &::after {
+        content: ' box';
+      }
+    }
+  }
+
+  &__raffle {
+    max-width: 388px;
+    padding-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-align: center;
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 41%, #FFBAAB 56%, #F9E3B0 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    @include font(16px, 1.2, 700);
+
+    ._retro-hold-raffle & {
+      display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 500px;
+      @include font(18px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 600px;
+      @include font(24px, 1.2, 700);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 700px;
+      @include font(28px, 1.2, 700);
+    }
+  }
+}
