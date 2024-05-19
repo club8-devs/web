@@ -27,11 +27,11 @@ picture {
 }
 
 *:focus-visible {
-  outline: 4px solid var(--root-color-system-active);
+  box-shadow: 0 0 0 6px var(--root-color-system-active);
 }
 
 ::selection {
   color: var(--root-color-primary);
   background: var(--root-color-secondary);
-  -webkit-text-fill-color:  var(--root-color-primary);
+  -webkit-text-fill-color: var(--root-color-primary);
 }

@@ -186,7 +186,7 @@
   }
 
   &__title {
-    max-width: 200px;
+    max-width: 300px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -194,19 +194,19 @@
     @include font(22px, 1.2, 700);
 
     @include media-breakpoint-up(md) {
-      max-width: 290px;
+      max-width: 330px;
       margin-bottom: 26px;
       @include font(26px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 300px;
+      max-width: 400px;
       margin-bottom: 30px;
       @include font(30px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 440px;
+      max-width: 500px;
       margin-bottom: 40px;
       @include font(40px, 1.2, 700);
     }
