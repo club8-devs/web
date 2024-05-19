@@ -27,16 +27,20 @@
     ._retro-pass & {
       aspect-ratio: 419/252;
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box & {
       aspect-ratio: 616/354;
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp') 2x
       );
     }
   }
