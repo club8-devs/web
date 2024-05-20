@@ -30,7 +30,9 @@
         url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif') 1x,
         url('/src/assets/images/retro/pass/pass-bronze-back.avif') type('image/avif') 2x,
         url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp') 1x,
-        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp') 2x
+        url('/src/assets/images/retro/pass/pass-bronze-back.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-bronze-back.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze-back.png') type('image/png') 2x
       );
     }
 
@@ -40,7 +42,9 @@
         url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif') 1x,
         url('/src/assets/images/retro/box/box-bronze-back.avif') type('image/avif') 2x,
         url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp') 1x,
-        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp') 2x
+        url('/src/assets/images/retro/box/box-bronze-back.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-bronze-back.png') type('image/png') 1x,
+        url('/src/assets/images/retro/box/box-bronze-back.png') type('image/png') 2x
       );
     }
   }
@@ -67,57 +71,89 @@
 
     ._retro-pass._retro-level-bronze & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-bronze.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-bronze.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-silver & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-silver.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-silver.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-silver.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-silver.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-silver.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-silver.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-silver.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-silver.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-gold & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-gold.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-gold.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-gold.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-gold.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-gold.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-gold.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-gold.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-gold.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-platinum & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-platinum.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-platinum.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-platinum.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-platinum.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-platinum.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-platinum.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-platinum.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-platinum.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-sapphire & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-sapphire.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-sapphire.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-sapphire.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-sapphire.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-sapphire.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-sapphire.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-sapphire.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-sapphire.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-emerald & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-emerald.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-emerald.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-emerald.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-emerald.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-emerald.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-emerald.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-emerald.png') type('image/png') 1x,
+        url('/src/assets/images/retro/pass/pass-emerald.png') type('image/png') 2x
       );
     }
 
     ._retro-pass._retro-level-ruby & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-ruby.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-ruby.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-ruby.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-ruby.webp') type('image/webp') 2x
       );
     }
 
     ._retro-pass._retro-level-diamond & {
       background-image: image-set(
-        url('/src/assets/images/retro/pass/pass-diamond.avif') type('image/avif'),
-        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp')
+        url('/src/assets/images/retro/pass/pass-diamond.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/pass/pass-diamond.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/pass/pass-diamond.webp') type('image/webp') 2x
       );
     }
 
@@ -125,57 +161,89 @@
 
     ._retro-box._retro-level-bronze & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-silver & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-gold & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-platinum & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-sapphire & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-emerald & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-ruby & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 2x
       );
     }
 
     ._retro-box._retro-level-diamond & {
       background-image: image-set(
-        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif'),
-        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp')
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 2x
       );
     }
   }
