@@ -12,6 +12,7 @@
 }
 
 .retro-hero {
+  position: relative;
 
   ._retro-not-eligible & {
     display: none;
@@ -19,6 +20,24 @@
 
   &--offset-bottom {
     margin-bottom: 112px;
+  }
+
+  &__msg {
+    display: none;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    inset: 0;
+    margin-bottom: 0 !important;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    ._raffle-result._retro-raffle-loser & {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__back {
@@ -49,7 +68,61 @@
     }
   }
 
-  &__front {
+  &__back-pre-raffle {
+    opacity: 0;
+    visibility: hidden;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+    aspect-ratio: 616/354;
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-pre-raffle-back.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-pre-raffle-back.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-pre-raffle-back.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-pre-raffle-back.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-pre-raffle-back.png') 1x,
+      url('/src/assets/images/retro/box/box-pre-raffle-back.png') 2x
+    );
+
+    ._raffle-start & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__back-raffle {
+    opacity: 0;
+    visibility: hidden;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+    aspect-ratio: 616/354;
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-raffle-back.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-raffle-back.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-raffle-back.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-raffle-back.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-raffle-back.png') 1x,
+      url('/src/assets/images/retro/box/box-raffle-back.png') 2x
+    );
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__front,
+  &__front-raffle {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -66,6 +139,29 @@
       top: 16%;
       width: 56%;
     }
+  }
+
+  &__coundown {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(-20px);
+    inset: 0;
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+
+    ._raffle-countdown & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    ._raffle-result & {
+      transition: none;
+    }
+  }
+
+  &__front {
 
     // Passes
 
@@ -248,11 +344,120 @@
     }
   }
 
+  &__front-raffle {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration-slow);
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    ._retro-raffle-level-bronze & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-bronze.png') 1x,
+        url('/src/assets/images/retro/box/box-bronze.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-silver & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-silver.png') 1x,
+        url('/src/assets/images/retro/box/box-silver.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-gold & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-gold.png') 1x,
+        url('/src/assets/images/retro/box/box-gold.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-platinum & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-platinum.png') 1x,
+        url('/src/assets/images/retro/box/box-platinum.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-sapphire & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-sapphire.png') 1x,
+        url('/src/assets/images/retro/box/box-sapphire.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-emerald & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-emerald.png') 1x,
+        url('/src/assets/images/retro/box/box-emerald.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-ruby & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-ruby.png') 1x,
+        url('/src/assets/images/retro/box/box-ruby.png') 2x
+      );
+    }
+
+    ._retro-raffle-level-diamond & {
+      background-image: image-set(
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 1x,
+        url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 2x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 1x,
+        url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 2x,
+        url('/src/assets/images/retro/box/box-diamond.png') 1x,
+        url('/src/assets/images/retro/box/box-diamond.png') 2x
+      );
+    }
+  }
+
   &__pic {
     position: relative;
     margin-bottom: 50px;
   }
 
+  &__raffle-title {
+    display: none;
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      display: block;
+    }
+  }
+
+  &__raffle-title,
   &__title {
     max-width: 300px;
     text-align: center;
@@ -377,9 +582,102 @@
     }
   }
 
+
+  &__raffle-level {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    @include font(22px, 1, 400, $second-font-family);
+
+    ._raffle-result:not(._retro-raffle-loser) & {
+      display: block;
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(36px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(40px, 1, 400, $second-font-family);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(50px, 1, 400, $second-font-family);
+    }
+
+    ._retro-raffle-level-bronze & {
+      color: var(--root-color-level-bronze);
+
+      &::before {
+        content: 'Bronze';
+      }
+    }
+
+    ._retro-raffle-level-silver & {
+      color: var(--root-color-level-silver);
+
+      &::before {
+        content: 'Silver';
+      }
+    }
+
+    ._retro-raffle-level-gold & {
+      color: var(--root-color-level-gold);
+
+      &::before {
+        content: 'Gold';
+      }
+    }
+
+    ._retro-raffle-level-platinum & {
+      color: var(--root-color-level-platinum);
+
+      &::before {
+        content: 'Platinum';
+      }
+    }
+
+    ._retro-raffle-level-sapphire & {
+      color: var(--root-color-level-sapphire);
+
+      &::before {
+        content: 'Sapphire';
+      }
+    }
+
+    ._retro-raffle-level-emerald & {
+      color: var(--root-color-level-emerald);
+
+      &::before {
+        content: 'Emerald';
+      }
+    }
+
+    ._retro-raffle-level-ruby & {
+      color: var(--root-color-level-ruby);
+
+      &::before {
+        content: 'Ruby';
+      }
+    }
+
+    ._retro-raffle-level-diamond & {
+      color: var(--root-color-level-diamond);
+
+      &::before {
+        content: 'Diamond';
+      }
+    }
+
+    &::after {
+      content: ' box';
+    }
+  }
+
   &__raffle {
-    max-width: 388px;
+    max-width: 320px;
     padding-top: 45px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -396,18 +694,55 @@
     }
 
     @include media-breakpoint-up(md) {
-      max-width: 500px;
+      max-width: 340px;
       @include font(18px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 600px;
+      max-width: 450px;
       @include font(24px, 1.2, 700);
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 700px;
+      max-width: 550px;
       @include font(28px, 1.2, 700);
+    }
+  }
+
+  &__raffle-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+
+    @include media-breakpoint-up(xl) {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      top: 10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 170px;
+    margin-top: 5%;
+
+    @include hover {
+      background-color: #ffffffc0;
+      color: black;
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-width: 230px;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 330px;
     }
   }
 }

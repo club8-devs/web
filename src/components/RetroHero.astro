@@ -7,9 +7,46 @@ import { Sprite } from 'astro-icon';
     <div class="retro-hero__back"></div>
     <div class="retro-hero__front"></div>
   </div>
-  <div class="retro-hero__title">Congratulations, you will receive within 24&nbsp;hours&nbsp;a</div>
+  <div class="retro-hero__title">Congratulations, you've&nbsp;received&nbsp;a</div>
   <div class="retro-hero__level"></div>
   <div class="retro-hero__raffle">
-    You have qualified for the 42&nbsp;box raffle among the big holders. It&nbsp;will take place here very soon, follow the announcements&nbsp;on <a href="https://t.me/anon_club" class="link">@anon_club</a>
+    You have qualified for the 42 <Sprite name="box" class="retro-hero__raffle-icon" /> raffle among the&nbsp;big&nbsp;holders. </a>
   </div>
+  <div class="raffle">
+
+  </div>
+
+  <div class="retro-hero__raffle-body">
+    <div class="retro-hero__pic">
+      <div class="retro-hero__back-pre-raffle">
+        <button class="retro-hero__btn btn" data-go-raffle-button>Go raffle</button>
+      </div>
+      <div class="retro-hero__coundown">
+  
+        <div class="countdown">
+    
+          <svg class="countdown__timer" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <circle class="countdown__circle" r="200" cx="200" cy="200"></circle>
+          </svg>
+          
+          <div class="countdown__number countdown_active"></div>
+        </div>
+  
+      </div>
+      <div class="retro-hero__back-raffle"></div>
+      <div class="retro-hero__front-raffle"></div>
+      <div class="retro-hero__msg msg msg--offset-bottom">
+        <div class="msg__title">You'll be lucky next time!</div>
+        <div class="msg__content">
+          <p class="text">Unfortunately you didn't&nbsp;win, but we&nbsp;really hope you&nbsp;have better luck&nbsp;next&nbsp;time 🖤</p>
+        </div>
+      </div>
+    </div>
+    <div class="retro-hero__raffle-title">Congratulations! Уou've&nbsp;received&nbsp;a</div>
+    <div class="retro-hero__raffle-level"></div>
+  </div>
+
 </div>
+
+<canvas id="confetti" class="confetti"></canvas>
+

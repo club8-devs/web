@@ -15,6 +15,8 @@ export default function getWalletData() {
   const checkNode = document.querySelector('[data-retro-check]');
   const resultsNode = document.querySelector('[data-retro-results]');
 
+  const goRaffleButton = document.querySelector('[data-go-raffle-button]');
+
   button.addEventListener('click', () => {
 
     const walletId = inputWallet.value.replace(/\s/g, '');
@@ -28,12 +30,12 @@ export default function getWalletData() {
     fetch(url)
     .then(response => {
       if (!response.ok) {
-        throw new Error(`Ошибка при получении данных: ${response.status}`);
+        throw new Error(`error receiving data: ${response.status}`);
       }
       return response.json();
     })
     .then(data => {
-      console.log('Полученные данные:', data);
+      console.log('received data:', data);
       body.classList.remove(loadingState);
       button.classList.remove(disabledState);
       button.classList.remove(loadingState);
@@ -52,10 +54,10 @@ export default function getWalletData() {
       inputWallet.classList.add(errorState);
 
       if (error.message.includes('404')) {
-        console.error('Данные не найдены');
+        console.error('No data found');
 
       } else {
-        console.error('Произошла ошибка:', error);
+        console.error('error:', error);
       }
     });
   });
@@ -68,6 +70,28 @@ export default function getWalletData() {
     }, 600);
     checkNode.classList.add(activeState);
     resultsNode.classList.remove(activeState);
+
+    body.classList.remove('_raffle-countdown');
+    body.classList.remove('_raffle-result');
+    body.classList.add('_raffle-start');
+
+    stopCountdown();
+    
+  });
+
+  goRaffleButton.addEventListener('click', () => {
+
+    body.classList.remove('_raffle-start');
+    body.classList.add('_raffle-countdown');
+
+    startCountdown();
+
+    setTimeout(function(){
+      body.classList.remove('_raffle-countdown');
+      body.classList.add('_raffle-result');
+
+      initConfetti();
+    }, 8000);
     
   });
 
@@ -80,6 +104,15 @@ export default function getWalletData() {
     body.classList.remove('_retro-level-emerald');
     body.classList.remove('_retro-level-ruby');
     body.classList.remove('_retro-level-diamond');
+
+    body.classList.remove('_retro-raffle-level-bronze');
+    body.classList.remove('_retro-raffle-level-silver');
+    body.classList.remove('_retro-raffle-level-gold');
+    body.classList.remove('_retro-raffle-level-platinum');
+    body.classList.remove('_retro-raffle-level-sapphire');
+    body.classList.remove('_retro-raffle-level-emerald');
+    body.classList.remove('_retro-raffle-level-ruby');
+    body.classList.remove('_retro-raffle-level-diamond');
 
     body.classList.remove('_retro-hold-raffle');
 
@@ -100,6 +133,8 @@ export default function getWalletData() {
     body.classList.remove('_retro-donate-8');
 
     body.classList.remove('_retro-not-eligible');
+    body.classList.remove('_retro-raffle-winner');
+    body.classList.remove('_retro-raffle-loser');
 
     if (data.data.eligible) {
       body.classList.add(`_retro-level-${data.data.reward.level}`);
@@ -120,5 +155,156 @@ export default function getWalletData() {
       walletNameNode.textContent = data.data.wallet_short;
     }
 
+
+    if (data.data.raffle_winner) {
+      body.classList.add('_retro-raffle-winner');
+      body.classList.add(`_retro-raffle-level-${data.data.raffle_reward_level}`);
+    } else {
+      body.classList.add('_retro-raffle-loser');
+    }
+
+  }
+
+  let countdownInterval; 
+  function startCountdown() {
+    const countdownNumberEl = document.querySelector('.countdown_active');
+    let countdown = 8;
+    countdownInterval = setInterval(function() {
+      countdown = (--countdown <= 0) ? 8 : countdown;
+      countdownNumberEl.textContent = countdown;
+  
+      if (countdown === 0) {
+        clearInterval(countdownInterval); // Остановка интервала
+      }
+    }, 1000);
+  
+    countdownNumberEl.textContent = countdown;
+  }
+
+  function stopCountdown() {
+    clearInterval(countdownInterval);
+  }
+
+
+// Confetti logic -- START --
+let canvas = document.getElementById("confetti");
+let ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let cx = ctx.canvas.width/2;
+let cy = ctx.canvas.height/2;
+
+let confetti = [];
+const confettiCount = 300;
+const gravity = 0.5;
+const terminalVelocity = 5;
+const drag = 0.075;
+const colors = [
+  { front : 'red', back: 'darkred'},
+  { front : 'green', back: 'darkgreen'},
+  { front : 'blue', back: 'darkblue'},
+  { front : 'yellow', back: 'darkyellow'},
+  { front : 'orange', back: 'darkorange'},
+  { front : 'pink', back: 'darkpink'},
+  { front : 'purple', back: 'darkpurple'},
+  { front : 'turquoise', back: 'darkturquoise'},
+];
+
+//-----------Functions--------------
+let resizeCanvas = () => {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	cx = ctx.canvas.width/2;
+	cy = ctx.canvas.height/2;
+}
+
+let randomRange = (min, max) => Math.random() * (max - min) + min
+
+let initConfetti = () => {
+  for (let i = 0; i < confettiCount; i++) {
+    confetti.push({
+      color      : colors[Math.floor(randomRange(0, colors.length))],
+      dimensions : {
+        x: randomRange(10, 20),
+        y: randomRange(10, 30),
+      },
+      position   : {
+        x: randomRange(0, canvas.width),
+        y: canvas.height - 1,
+      },
+      rotation   : randomRange(0, 2 * Math.PI),
+      scale      : {
+        x: 1,
+        y: 1,
+      },
+      velocity   : {
+        x: randomRange(-25, 25),
+        y: randomRange(0, -50),
+      },
+    });
   }
 }
+
+//---------Render-----------
+let render = () => {  
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  confetti.forEach((confetto, index) => {
+    let width = (confetto.dimensions.x * confetto.scale.x);
+    let height = (confetto.dimensions.y * confetto.scale.y);
+    
+    // Move canvas to position and rotate
+    ctx.translate(confetto.position.x, confetto.position.y);
+    ctx.rotate(confetto.rotation);
+    
+    // Apply forces to velocity
+    confetto.velocity.x -= confetto.velocity.x * drag;
+    confetto.velocity.y = Math.min(confetto.velocity.y + gravity, terminalVelocity);
+    confetto.velocity.x += Math.random() > 0.5 ? Math.random() : -Math.random();
+    
+    // Set position
+    confetto.position.x += confetto.velocity.x;
+    confetto.position.y += confetto.velocity.y;
+    
+    // Delete confetti when out of frame
+    if (confetto.position.y >= canvas.height) confetti.splice(index, 1);
+
+    // Loop confetto x position
+    if (confetto.position.x > canvas.width) confetto.position.x = 0;
+    if (confetto.position.x < 0) confetto.position.x = canvas.width;
+
+    // Spin confetto by scaling y
+    confetto.scale.y = Math.cos(confetto.position.y * 0.1);
+    ctx.fillStyle = confetto.scale.y > 0 ? confetto.color.front : confetto.color.back;
+
+    // Draw confetto
+    ctx.fillRect(-width / 2, -height / 2, width, height);
+    
+    // Reset transform matrix
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+  });
+
+  // Fire off another round of confetti
+  //if (confetti.length <= 10) initConfetti();
+
+  window.requestAnimationFrame(render);
+}
+
+//---------Execution--------
+render();
+
+//----------Resize----------
+window.addEventListener('resize', function () {
+  resizeCanvas();
+});
+
+//------------Click------------
+
+
+// Confetti logic -- END --
+
+
+}
+
+
+

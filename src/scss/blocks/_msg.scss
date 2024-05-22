@@ -1,7 +1,7 @@
 .msg {
   display: none;
 
-  ._retro-not-eligible & {
+  ._retro-not-eligible &--eligible {
     display: block;
   }
 
