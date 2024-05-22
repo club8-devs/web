@@ -674,6 +674,14 @@
     }
   }
 
+  &__raffle-body {
+    display: none;
+
+    ._retro-hold-raffle & {
+      display: block;
+    }
+  }
+
   &__raffle {
     max-width: 320px;
     padding-top: 45px;
