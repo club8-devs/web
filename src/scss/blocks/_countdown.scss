@@ -16,6 +16,7 @@
   &__number {
     position: relative;
     display: inline-block;
+    text-shadow: 1px 0 4px #000;
 
     @include font(80px, 1, 400, $second-font-family);
 

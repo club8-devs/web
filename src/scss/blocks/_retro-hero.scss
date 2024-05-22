@@ -149,6 +149,10 @@
     inset: 0;
     transition-property: opacity, visibility, transform;
     transition-duration: var(--root-animation-duration-slow);
+    background-image: url('/src/assets/images/retro/box/box.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     ._raffle-countdown & {
       opacity: 1;
