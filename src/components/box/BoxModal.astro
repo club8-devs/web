@@ -1,0 +1,21 @@
+---
+import { Sprite } from 'astro-icon';
+
+---
+<div class="box-modal">
+  <video playsinline muted class="box-modal__video box-modal__video--portrait" data-opening-video>
+    <source src="/src/assets/video/box-opening-mobile.mp4" type="video/mp4">
+    <source src="/src/assets/video/box-opening-mobile.webm" type="video/webm">
+    <source src="/src/assets/video/box-opening-mobile.ogv" type="video/ogg">
+  </video>
+  <video playsinline muted class="box-modal__video box-modal__video--landscape" data-opening-video>
+    <source src="/src/assets/video/box-opening-desctop.mp4" type="video/mp4">
+    <source src="/src/assets/video/box-opening-desctop.webm" type="video/webm">
+    <source src="/src/assets/video/box-opening-desctop.ogv" type="video/ogg">
+  </video>
+
+  <div id="box-items-logo-list" class="box-items-logo-list"></div>
+  <div class="box-modal__footer">
+    <button class="box-modal__btn btn" type="button" data-close-modal-btn>Check details</button>
+  </div>
+</div>

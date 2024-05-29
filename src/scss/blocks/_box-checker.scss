@@ -1,0 +1,137 @@
+.box-checker {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    max-width: 460px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 500px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -49% -45% -45% -39%;
+    background-size: cover;
+    opacity: 0.5;
+  }
+
+  [data-box-level='bronze'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-bronze.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-bronze.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-bronze.png') 1x,
+      url('/src/assets/images/retro/box/box-bronze.png') 2x
+    );
+  }
+
+  [data-box-level='silver'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-silver.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-silver.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-silver.png') 1x,
+      url('/src/assets/images/retro/box/box-silver.png') 2x
+    );
+  }
+
+  [data-box-level='gold'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-gold.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-gold.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-gold.png') 1x,
+      url('/src/assets/images/retro/box/box-gold.png') 2x
+    );
+  }
+
+  [data-box-level='platinum'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-platinum.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-platinum.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-platinum.png') 1x,
+      url('/src/assets/images/retro/box/box-platinum.png') 2x
+    );
+  }
+
+  [data-box-level='sapphire'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-sapphire.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-sapphire.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-sapphire.png') 1x,
+      url('/src/assets/images/retro/box/box-sapphire.png') 2x
+    );
+  }
+
+  [data-box-level='emerald'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-emerald.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-emerald.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-emerald.png') 1x,
+      url('/src/assets/images/retro/box/box-emerald.png') 2x
+    );
+  }
+
+  [data-box-level='ruby'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-ruby.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-ruby.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-ruby.png') 1x,
+      url('/src/assets/images/retro/box/box-ruby.png') 2x
+    );
+  }
+
+  [data-box-level='diamond'] &::after {
+    background-image: image-set(
+      url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 1x,
+      url('/src/assets/images/retro/box/box-diamond.avif') type('image/avif') 2x,
+      url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 1x,
+      url('/src/assets/images/retro/box/box-diamond.webp') type('image/webp') 2x,
+      url('/src/assets/images/retro/box/box-diamond.png') 1x,
+      url('/src/assets/images/retro/box/box-diamond.png') 2x
+    );
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 170px;
+    margin-top: 5%;
+
+    @include hover {
+      background-color: rgba(255 255 255 / 35%);
+      color: #000;
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-width: 230px;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 330px;
+    }
+  }
+}

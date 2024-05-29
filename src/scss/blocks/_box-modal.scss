@@ -1,0 +1,82 @@
+.box-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: var(--root-animation-duration);
+
+  ._box-opening & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__video {
+    visibility: hidden;
+    opacity: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    ._box-opening &--portrait {
+      @media (orientation: portrait) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    ._box-opening &--landscape {
+      @media (orientation: landscape) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+    transition-delay: 850ms;
+  }
+
+  ._box-has-opened &__btn {
+    background: #000;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    @include hover {
+      background-color: #262626;
+    }
+  }
+}

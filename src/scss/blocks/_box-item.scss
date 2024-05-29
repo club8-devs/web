@@ -1,0 +1,203 @@
+.box-item {
+  --box-item-size: 55px;
+
+  @include media-breakpoint-up(xsm) {
+    --box-item-size: 74px;
+  }
+
+  @include media-breakpoint-up(md) {
+    --box-item-size: 90px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    --box-item-size: 100px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    --box-item-size: 120px;
+  }
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+  @include font(14px, 1.2);
+
+  @include media-breakpoint-up(md) {
+    gap: 14px;
+    @include font(17px, 1.2);
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 16px;
+    @include font(21px, 1.2);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    gap: 18px;
+    @include font(23px, 1.2);
+  }
+
+  &--dark &__pic {
+    background-color: rgba(0 0 0 / 12%);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__pic {
+    position: relative;
+    width: var(--box-item-size);
+    height: var(--box-item-size);
+    background-color: rgba(255 255 255 / 8%);
+    border-radius: 10px;
+
+    @include media-breakpoint-up(xsm) {
+      border-radius: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      border: 1.5px solid transparent;
+      background: linear-gradient(278.19deg, #FFFFFF 0.84%, rgba(200, 200, 200, 0.2) 15.78%, rgba(187, 187, 187, 0.4) 43.33%, rgba(200, 200, 200, 0.2) 80.22%, #FFFFFF 94.22%) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+
+      @include media-breakpoint-up(xsm) {
+        border-radius: 20px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 6px;
+      overflow: hidden;
+
+      @include media-breakpoint-up(xsm) {
+        inset: 12px;
+        border-radius: 10px;
+      }
+    }
+
+    &[data-box-item-name='ANON XP'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/anon-xp.jpg');
+      }
+    }
+
+    &[data-box-item-name='ANON Stories Rewind'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/tv.jpg');
+      }
+    }
+
+    &[data-box-item-name='Agent ID'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/agent-id.jpg');
+      }
+    }
+
+    &[data-box-item-name='\$ANON'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/anon.jpg');
+      }
+    }
+
+    &[data-box-item-name='Egg Wisdom'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/eggs.jpg');
+      }
+    }
+
+    &[data-box-item-name='Anonymous Numbers'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/888.jpg');
+      }
+    }
+
+    &[data-box-item-name='Zifretta'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/zifretta.jpg');
+      }
+    }
+
+    &[data-box-item-name='\$Jetton'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/jetton.jpg');
+      }
+    }
+
+    &[data-box-item-name='\$OPEN Project'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/open-project.jpg');
+      }
+    }
+
+    &[data-box-item-name='StormTrade'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/storm-trade.jpg');
+      }
+    }
+
+    &[data-box-item-name='Open Project'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/open-project.jpg');
+      }
+    }
+
+    &[data-box-item-name='Drophunter | Mystic Jars'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/drophunter.jpg');
+      }
+    }
+
+    &[data-box-item-name='The Pixels Vouchers'] {
+
+      &::after {
+        background-image: url('/src/assets/images/reveal/items/pixels.jpg');
+      }
+    }
+  }
+
+
+  &__body {
+    display: grid;
+    align-content: center;
+    gap: 8px;
+  }
+
+  &__type {
+    color: #fff;
+  }
+
+  &__name {
+    color: #9f9f9f;
+  }
+
+  &__rarity {
+    color: #fff;
+  }
+}

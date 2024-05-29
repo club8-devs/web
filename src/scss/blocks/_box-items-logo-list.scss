@@ -1,0 +1,42 @@
+.box-items-logo-list {
+
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+  }
+
+  &__item {
+    position: absolute;
+    inset: 0;
+    padding: 2% 6%;
+    display: flex;
+    gap: 12px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md) {
+      padding: 4% 10%;
+      gap: 12px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 4% 14%;
+      gap: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 4% 30%;
+      gap: 30px;
+    }
+  }
+
+  &__item._active &__box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

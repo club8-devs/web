@@ -1,0 +1,7 @@
+.box-check {
+  display: none;
+
+  &._active {
+    display: block;
+  }
+}

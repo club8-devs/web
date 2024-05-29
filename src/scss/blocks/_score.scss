@@ -105,6 +105,10 @@
       mask-composite: exclude;
       opacity: 0;
     }
+
+    &[data-box-item-amount='0'] {
+      display: none;
+    }
   }
 
   ._retro-pass &__item[data-retro-pass],
@@ -202,6 +206,14 @@
 
     &:last-child {
       text-align: center;
+    }
+  }
+
+  &--box-items &__value {
+
+    &:first-child {
+      white-space: wrap;
+      padding-left: 0;
     }
   }
 

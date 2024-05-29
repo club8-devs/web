@@ -1,0 +1,167 @@
+.box-results {
+  display: none;
+
+  &._active {
+    display: block;
+  }
+
+  &__actions {
+    padding-top: 54px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+
+    ._share-button & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 64px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 74px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 100px;
+    }
+  }
+
+  &__copied {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+    background: #B4BAEC;
+    background: linear-gradient(to right, #B4BAEC 3%, #FFBAAB 26%, #F9E3B0 56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__btn._active &__copied {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__text {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--root-animation-duration);
+  }
+
+  &__btn._active &__text {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+  }
+
+  &__btn {
+    position: relative;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: var(--root-animation-duration);
+    border-radius: 999px;
+    @include font(16px, 1, 500);
+
+    @include media-breakpoint-up(sm) {
+      padding: 18px 32px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 22px 40px;
+      @include font(20px, 1, 500);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 28px 46px;
+      @include font(24px, 1, 500);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 32px 62px;
+      @include font(28px, 1, 500);
+    }
+
+    @include hover {
+      background: rgba(255 255 255 / 10%);
+    }
+  }
+
+  &__btn-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: -3px;
+
+    @include media-breakpoint-up(md) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 28px;
+      height: 28px;
+      top: -4px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &__copied-icon {
+    width: 24px;
+    height: 24px;
+
+    @include media-breakpoint-up(md) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  ._shared &__actions {
+    display: none;
+  }
+}

@@ -1,12 +1,5 @@
 .retro-results {
-  // opacity: 0;
-  // visibility: hidden;
-  // height: 0;
-  // overflow: hidden;
-  // transform: translateY(-50px);
-  // transition-property: opacity, visibility, transform;
-  // transition-duration: 1000ms;
-  display: none;
+  display: block;
 
   @include media-breakpoint-up(md) {
     padding-top: 20px;
@@ -22,11 +15,6 @@
   }
 
   &._active {
-    // opacity: 1;
-    // visibility: visible;
-    // overflow: visible;
-    // height: auto;
-    // transform: translateY(0);
     display: block;
   }
 

@@ -11,6 +11,22 @@
     gap: 16px;
   }
 
+  &--offset-bottom {
+    margin-bottom: 44px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 70px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 100px;
+    }
+  }
+
   &__icon {
     width: 24px;
     height: 24px;

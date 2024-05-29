@@ -35,3 +35,12 @@ picture {
   background: var(--root-color-secondary);
   -webkit-text-fill-color: var(--root-color-primary);
 }
+
+html[data-modal-active='true'],
+[data-modal-active='true'] body {
+  touch-action: none;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  overflow: hidden;
+}

@@ -1,8 +1,9 @@
 export default function getWalletData() {
+  const checkNode = document.querySelector('[data-retro-check]');
+
+  if(!checkNode) return;
+
   const inputWallet = document.getElementById('wallet');
-
-  if(!inputWallet) return;
-
   const button = document.getElementById('wallet-button');
   const closeButton = document.querySelector('[data-retro-wallet-close]');
   const loadingState = '_loading';
@@ -12,7 +13,7 @@ export default function getWalletData() {
   const body = document.getElementsByTagName('body')[0];
   const donatedNode = document.querySelector('[data-retro-donated]');
   const walletNameNode = document.querySelector('[data-retro-wallet-name]');
-  const checkNode = document.querySelector('[data-retro-check]');
+  
   const resultsNode = document.querySelector('[data-retro-results]');
 
   const goRaffleButton = document.querySelector('[data-go-raffle-button]');

@@ -5,8 +5,6 @@
   --layout-max-width: 1920px;
   --layout-section-vspace: var(--root-section-vspace);
 
-  
-
   &__body {
     display: grid;
     align-items: center;
@@ -24,7 +22,7 @@
     }
 
     &._retrodrop {
-      background-color: #000000;
+      background-color: #000;
       background-image: url('/src/assets/images/retro/retro.webp');
       background-repeat: no-repeat;
       background-position: top center;
@@ -36,6 +34,22 @@
 
       @include media-breakpoint-up(xl) {
         background-image: url('/src/assets/images/retro/retro-xl.webp');
+      }
+    }
+
+    &._reveal {
+      background-color: #000;
+      background-image: url('/src/assets/images/reveal/reveal-2.webp');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+
+      @include media-breakpoint-up(md) {
+        background-image: url('/src/assets/images/reveal/reveal-2-md.webp');
+      }
+
+      @include media-breakpoint-up(xl) {
+        background-image: url('/src/assets/images/reveal/reveal-2-xl.webp');
       }
     }
   }

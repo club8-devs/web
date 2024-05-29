@@ -1,0 +1,45 @@
+@keyframes rotation-share {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-reveal-page {
+
+  &::before {
+    content: '';
+    position: relative;
+    top: 20vh;
+    right: 8px;
+    width: 20vw;
+    height: 20vw;
+    border: 10px dotted #fff;
+    border-radius: 50%;
+    animation: rotation-share 4s linear infinite;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @include media-breakpoint-up(lg) {
+      width: 10vw;
+      height: 10vw;
+    }
+
+    ._loading-shared & {
+      display: block;
+    }
+  }
+
+  &__body {
+
+    ._loading-shared & {
+      visibility: hidden;
+    }
+  }
+}
