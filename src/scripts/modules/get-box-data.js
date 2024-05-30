@@ -292,9 +292,7 @@ function addBoxItemsListHtml(data) {
 }
 
   function showOpening(boxAddress) {
-    setTimeout(function(){
-      setBoxModalHeight();
-    }, 300);
+    setBoxModalHeight();
 
     document.documentElement.setAttribute('data-modal-active', true);
     body.classList.add(openingState);
