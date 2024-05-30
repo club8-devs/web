@@ -365,15 +365,6 @@ function addBoxItemsListHtml(data) {
 
   function setBoxModalHeight() {
 
-    var boxModal = document.querySelector('.box-modal');
-
-    function updateHeight() {
-        var height = window.innerHeight;
-        boxModal.style.height = height + 'px';
-    }
-
-    updateHeight();
-
-    window.addEventListener('resize', updateHeight);
+    window.scrollBy(0, 2);
   }
 }
