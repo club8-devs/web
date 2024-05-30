@@ -26,5 +26,5 @@ export default function setCountdown() {
       }
   }
   
-  countdownTimer = setInterval(doCountdown, 1000);
+  let countdownTimer = setInterval(doCountdown, 1000);
 }

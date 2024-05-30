@@ -1,6 +1,7 @@
 .box-modal {
   position: fixed;
   inset: 0;
+  height: 100dvh;
   z-index: 100;
   visibility: hidden;
   opacity: 0;
