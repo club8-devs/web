@@ -19,6 +19,7 @@
     object-fit: cover;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     position: fixed;
     top: 0;
     left: 0;
@@ -49,7 +50,6 @@
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    background: transparent;
 
     @include media-breakpoint-up(md) {
       padding-top: 60px;
