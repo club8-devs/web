@@ -292,6 +292,10 @@ function addBoxItemsListHtml(data) {
 }
 
   function showOpening(boxAddress) {
+    setTimeout(function(){
+      setBoxModalHeight();
+    }, 300);
+
     document.documentElement.setAttribute('data-modal-active', true);
     body.classList.add(openingState);
     body.setAttribute('data-box-address', boxAddress);
@@ -357,5 +361,19 @@ function addBoxItemsListHtml(data) {
       body.classList.add(loadingSharedState);
       doMagic(paramValue);
     }
+  }
+
+  function setBoxModalHeight() {
+
+    var boxModal = document.querySelector('.box-modal');
+
+    function updateHeight() {
+        var height = window.innerHeight;
+        boxModal.style.height = height + 'px';
+    }
+
+    updateHeight();
+
+    window.addEventListener('resize', updateHeight);
   }
 }
