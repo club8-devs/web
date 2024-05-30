@@ -20,6 +20,11 @@ const currentPageUrl = Astro.url.pathname;
           </a>
         </li>
         <li class="main-nav__item">
+          <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/' || currentPageUrl === '/box' || currentPageUrl === '/box/') ? '/box' : '#box'} class={`main-nav__link link link--nav ${(currentPageUrl === '/box' || currentPageUrl === '/box/') ? '_active' : ''}`} data-main-nav-item="box">
+            Reveal
+          </a>
+        </li>
+        <li class="main-nav__item">
           <a href={(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/' || currentPageUrl === '/box' || currentPageUrl === '/box/') ? '/retrodrop' : '#retrodrop'} class={`main-nav__link link link--nav ${(currentPageUrl === '/retrodrop' || currentPageUrl === '/retrodrop/') ? '_active' : ''}`} data-main-nav-item="retrodrop">
             Retrodrop
           </a>
@@ -32,14 +37,14 @@ const currentPageUrl = Astro.url.pathname;
             {(getLang(currentPageUrl) === 'cn') && ('日曆計劃')}
           </a>
         </li>
-        <li class="main-nav__item _dsiabled">
+        <!-- <li class="main-nav__item _dsiabled">
           <div class="main-nav__link">
             {(getLang(currentPageUrl) === 'en') && (<>Marketplace <span class="main-nav__note">TBD</span></>)}
             {(getLang(currentPageUrl) === 'ru') && (<>Маркетплейс <span class="main-nav__note">TBD</span></>)}
             {(getLang(currentPageUrl) === 'ua') && (<>Маркетплейс <span class="main-nav__note">TBD</span></>)}
             {(getLang(currentPageUrl) === 'cn') && (<>市場 TBD</>)}
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="header__socials socials">

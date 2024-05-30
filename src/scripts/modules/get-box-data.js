@@ -23,11 +23,7 @@ export default function getBoxData() {
   const walletNameNode = document.querySelector('[data-box-wallet-name]');
   const resultsNode = document.querySelector('[data-box-results]');
 
-  console.log('button ', button);
-
   button.addEventListener('click', () => {
-
-    console.log('button');
 
     doMagic();
 
@@ -40,8 +36,6 @@ export default function getBoxData() {
     }
 
     const url = 'https://anon.tg/box/?id=' + body.getAttribute('data-wallet');
-
-    console.log('url', url);
 
     navigator.clipboard.writeText(url).then(function() {
 
@@ -63,7 +57,6 @@ export default function getBoxData() {
 
     if(sharedId) {
       url = `https://checker.anon.tg/reveal/${sharedId}`;
-      console.log('sharedId !!!!!!!!!!!!');
     } else {
       const walletId = inputWallet.value.replace(/\s/g, '');
       body.setAttribute('data-wallet', walletId);
@@ -126,8 +119,6 @@ export default function getBoxData() {
       item.classList.remove('_active');
     });
 
-    console.log('closeButton');
-
     inputWallet.value = '';
     setTimeout(function(){
       inputWallet.focus();
@@ -160,8 +151,6 @@ export default function getBoxData() {
       }
     });
 
-    console.log('close boxAddress', boxAddress);
-
     setTimeout(function(){
       showSaredButton();
     }, 1000);
@@ -169,8 +158,6 @@ export default function getBoxData() {
   });
 
   function addBoxesHtml(data) {
-
-    console.log('addBoxesHtml');
 
     walletNameNode.textContent = data.data.wallet_short;
 
@@ -292,7 +279,6 @@ function addBoxItemsListHtml(data) {
 }
 
   function showOpening(boxAddress) {
-    setBoxModalHeight();
 
     document.documentElement.setAttribute('data-modal-active', true);
     body.classList.add(openingState);
@@ -314,22 +300,13 @@ function addBoxItemsListHtml(data) {
                   }
               });
 
-              console.log('VIDEO ended!!!!');
+
           }
       });
       video.currentTime = 0;
       video.play();
 });
 
-    // setTimeout(function() {
-    //   body.classList.add(hasOpenedState);
-
-    // items.forEach(function(item) {
-    //     if (boxAddress === item.getAttribute('data-box-address')) {
-    //         item.classList.add('_active');
-    //     }
-    // });
-    // }, 5600);
   }
 
 
@@ -351,18 +328,12 @@ function addBoxItemsListHtml(data) {
   shareResults();
 
   function shareResults() {
-    console.log('shareResults');
     let url = new URL(window.location.href);
     let paramValue = url.searchParams.get('id');
     if (paramValue !== null) {
-      console.log('Значение параметра:', paramValue);
       body.classList.add(loadingSharedState);
       doMagic(paramValue);
     }
   }
 
-  function setBoxModalHeight() {
-
-    window.scrollBy(0, 2);
-  }
 }

@@ -22,7 +22,7 @@ export default function setCountdown() {
 
       if (distance < 0) {
           clearInterval(countdownTimer);
-          timeControl.innerHTML = 'Wake Up'
+          timeControl.innerHTML = '<a href="/box" class="btn btn--wide">See your box</a>'
       }
   }
   
