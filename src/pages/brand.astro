@@ -7,6 +7,11 @@ import RetroStatus from '@components/RetroStatus.astro';
 import { Sprite } from 'astro-icon';
 
 const pageTitle = "ANON:Brand";
+
+import anonFullLogoDark from '@images/svg/anon-full-logo-dark.svg';
+import anonFullLogoLight from '@images/svg/anon-full-logo-light.svg';
+import anonLogoShortOnLight from '@images/svg/anon-logo-short-on-light.svg';
+import anonLogoShortOnDark from '@images/svg/anon-logo-short-on-dark.svg';
 ---
 
 <BaseLayout title={pageTitle}>
@@ -29,7 +34,7 @@ const pageTitle = "ANON:Brand";
               <li class="brand-logo-grid__item">
                 <div class="brand-logo">
                   <div class="brand-logo__frame">
-                    <img src="/src/assets/images/svg/anon-full-logo-dark.svg" alt="ANON Full Logo Dark Color." class="brand-logo__img">
+                    <img src={anonFullLogoDark.src} alt="ANON Full Logo Dark Color." class="brand-logo__img">
                   </div>
                   <div class="brand-logo__legend">Light background logo <span class="brand-logo__value">#1D1018</span></div>
                   <div class="brand-logo__footer link-controls">
@@ -41,7 +46,7 @@ const pageTitle = "ANON:Brand";
               <li class="brand-logo-grid__item">
                 <div class="brand-logo brand-logo--dark-full">
                   <div class="brand-logo__frame">
-                    <img src="/src/assets/images/svg/anon-full-logo-light.svg" alt="ANON Full Logo Dark Color." class="brand-logo__img">
+                    <img src={anonFullLogoLight.src} alt="ANON Full Logo Dark Color." class="brand-logo__img">
                   </div>
                   <div class="brand-logo__legend">Dark background logo <span class="brand-logo__value">#FFFFFF</span></div>
                   <div class="brand-logo__footer link-controls">
@@ -53,7 +58,7 @@ const pageTitle = "ANON:Brand";
               <li class="brand-logo-grid__item">
                 <div class="brand-logo">
                   <div class="brand-logo__frame">
-                    <img src="/src/assets/images/svg/anon-logo-short-on-light.svg" alt="ANON Short Logo Dark Color." class="brand-logo__img">
+                    <img src={anonLogoShortOnLight.src} alt="ANON Short Logo Dark Color." class="brand-logo__img">
                   </div>
                   <div class="brand-logo__legend">Light background short logo <span class="brand-logo__value">#1D1018 #FFFFFF</span></div>
                   <div class="brand-logo__footer link-controls">
@@ -65,7 +70,7 @@ const pageTitle = "ANON:Brand";
               <li class="brand-logo-grid__item">
                 <div class="brand-logo brand-logo--dark-short">
                   <div class="brand-logo__frame">
-                    <img src="/src/assets/images/svg/anon-logo-short-on-dark.svg" alt="ANON Short Logo Dark Color." class="brand-logo__img">
+                    <img src={anonLogoShortOnDark.src} alt="ANON Short Logo Dark Color." class="brand-logo__img">
                   </div>
                   <div class="brand-logo__legend">Dark background short logo <span class="brand-logo__value">#1D1018 #FFFFFF</span></div>
                   <div class="brand-logo__footer link-controls">

@@ -4,6 +4,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro build && pagefind --source dist --bundle-dir pagefind && astro preview",
+    "preview2": "astro build &&astro preview",
     "postbuild": "pagefind --source dist --bundle-dir pagefind"
   },
   "dependencies": {
