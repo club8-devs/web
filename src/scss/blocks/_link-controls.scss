@@ -1,0 +1,44 @@
+.link-controls {
+  display: flex;
+  gap: 4px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    gap: 8px;
+  }
+
+  &__item {
+    color: #6E8EFF;
+    text-decoration: none;
+    padding: 12px;
+    margin-left: -12px;
+    transition-property: color;
+    transition-duration: var(--root-animation-duration);
+    transition-timing-function: ease;
+    @include font(14px, 1.2, 600);
+
+    @include media-breakpoint-up(sm) {
+      @include font(20px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(14px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(16px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(18px, 1.2, 600);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(20px, 1.2, 600);
+    }
+
+    @include hover {
+      color: #aabbfb;
+    }
+  }
+}

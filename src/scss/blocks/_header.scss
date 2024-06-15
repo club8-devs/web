@@ -6,6 +6,26 @@
     grid-template-columns: min-content 1fr;
   }
 
+  ._brand & {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 70px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 90px;
+    }
+  }
+
   &__actions {
     display: flex;
     justify-content: space-between;

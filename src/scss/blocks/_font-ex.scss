@@ -1,0 +1,123 @@
+.font-ex {
+  display: grid;
+  gap: 52px;
+
+  &__section {
+    display: grid;
+    gap: 30px;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: 25% 1fr;
+      gap: 6%;
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 120px;
+  }
+
+  &__header {
+    display: grid;
+    align-content: flex-start;
+    gap: 12px;
+
+    @include media-breakpoint-up(md) {
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    @include font(22px, 1.2);
+    @include media-breakpoint-up(sm) {
+      @include font(28px, 1.2);
+    }
+    @include media-breakpoint-up(xxl) {
+      @include font(32px, 1.2);
+    }
+  }
+
+  &__section--heading &__title,
+  &__section--subtitle &__title {
+    font-weight: 700;
+  }
+
+  &__legend {
+    @include font(16px, 1.2);
+
+    @include media-breakpoint-up(sm) {
+      @include font(18px, 1.2);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(20px, 1.2);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(24px, 1.2);
+    }
+  }
+
+  &__content {
+    @include font(15px, 1.2);
+  }
+
+  &__section--heading &__content {
+    @include font(26px, 1.2, 700);
+
+    @include media-breakpoint-up(sm) {
+      @include font(28px, 1.2, 700);
+    }
+    @include media-breakpoint-up(md) {
+      @include font(32px, 1.2, 700);
+    }
+    @include media-breakpoint-up(xl) {
+      @include font(42px, 1.2, 700);
+    }
+    @include media-breakpoint-up(xxl) {
+      @include font(52px, 1.2, 700);
+    }
+  }
+
+  &__section--subtitle &__content {
+    @include font(18px, 1.2, 700);
+
+    @include media-breakpoint-up(sm) {
+      @include font(20px, 1.2, 700);
+    }
+    @include media-breakpoint-up(md) {
+      @include font(22px, 1.2, 700);
+    }
+    @include media-breakpoint-up(xl) {
+      @include font(26px, 1.2, 700);
+    }
+    @include media-breakpoint-up(xxl) {
+      @include font(30px, 1.2, 600);
+    }
+  }
+
+  &__text {
+
+    &--offset-bottom {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__link {
+    color: #6E8EFF;
+    text-decoration: none;
+    padding: 12px;
+    margin-left: -12px;
+    transition-property: color;
+    transition-duration: var(--root-animation-duration);
+    transition-timing-function: ease;
+
+    @include hover {
+      color: #aabbfb;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(24px, 1.2, 600);
+    }
+  }
+}

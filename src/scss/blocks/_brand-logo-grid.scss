@@ -1,0 +1,26 @@
+.brand-logo-grid {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+
+    @include media-breakpoint-up(md) {
+      gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      gap: 40px;
+    }
+  }
+
+  &--bg &__list {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

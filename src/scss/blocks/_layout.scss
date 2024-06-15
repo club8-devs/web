@@ -7,7 +7,8 @@
 
   &__body {
     display: grid;
-    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
     grid-template-rows: max-content 1fr max-content;
     max-width: var(--layout-max-width);
     margin-left: auto;
@@ -51,6 +52,14 @@
       @include media-breakpoint-up(xl) {
         background-image: url('/src/assets/images/reveal/reveal-2-xl.webp');
       }
+    }
+
+    &._brand {
+      background-color: #0f1129;
+      background-image: url('/src/assets/images/brand.webp');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
     }
   }
 

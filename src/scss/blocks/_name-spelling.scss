@@ -1,0 +1,74 @@
+.name-spelling {
+  --name-spelling-color-icon-yep: var(--root-color-yep);
+  --name-spelling-color-icon-not: var(--root-color-not);
+
+  display: grid;
+  gap: 26px;
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    gap: 20%;
+  }
+
+  &__item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    @include font(24px, 1.6, 600);
+
+    @include media-breakpoint-up(md) {
+      gap: 16px;
+      @include font(32px, 1.6, 600);
+    }
+
+    @include media-breakpoint-up(lg) {
+      gap: 20px;
+      @include font(44, 1.6, 600);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      gap: 28px;
+      @include font(52px, 1.6, 600);
+    }
+  }
+
+  &__item--not &__icon {
+    color: var(--name-spelling-color-icon-not);
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    color: var(--name-spelling-color-icon-yep);
+    position: relative;
+    top: 1px;
+
+    @include media-breakpoint-up(sm) {
+      width: 32px;
+      height: 32px;
+      top: 2px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 32px;
+      height: 32px;
+      top: 8px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 36px;
+      height: 36px;
+      top: 6px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 46px;
+      height: 46px;
+      top: 16px;
+    }
+  }
+
+  &__variant {
+    display: block;
+  }
+}

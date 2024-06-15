@@ -1,0 +1,50 @@
+.section-header {
+
+  &--offset-bottom {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 140px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 250px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    @include font(18px, 1.4);
+
+    @include media-breakpoint-up(md) {
+      @include font(24px, 1.4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font(36px, 1.4);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(42px, 1.4);
+    }
+  }
+}

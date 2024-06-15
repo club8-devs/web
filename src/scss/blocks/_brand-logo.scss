@@ -1,0 +1,115 @@
+.brand-logo {
+
+  &--sq &__frame {
+    aspect-ratio: 1/1;
+  }
+
+  &__frame {
+    aspect-ratio: 343/190;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #a3acff;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  &--dark-full &__frame,
+  &--dark-short &__frame,
+  &--gradient-1 &__frame,
+  &--gradient-2 &__frame,
+  &--gradient-3 &__frame,
+  &--gradient-4 &__frame,
+  &--bg-1 &__frame,
+  &--bg-2 &__frame,
+  &--bg-3 &__frame {
+    background-color: #0f1129;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &--dark-full &__frame {
+    background-image: url('/src/assets/images/brand/dark-bg-full-logo.webp');
+  }
+
+  &--dark-short &__frame {
+    background-image: url('/src/assets/images/brand/dark-bg-short-logo.webp');
+  }
+
+  &--gradient-1 &__frame {
+    background-image: url('/src/assets/images/brand/gradients/bg-gradient-1.webp');
+  }
+
+  &--gradient-2 &__frame {
+    background-image: url('/src/assets/images/brand/gradients/bg-gradient-2.webp');
+  }
+
+  &--gradient-3 &__frame {
+    background-image: url('/src/assets/images/brand/gradients/bg-gradient-3.webp');
+  }
+
+  &--gradient-4 &__frame {
+    background-image: url('/src/assets/images/brand/gradients/bg-gradient-4.webp');
+  }
+
+  &--bg-1 &__frame {
+    background-image: url('/src/assets/images/brand/bg/bg-1.webp');
+  }
+
+  &--bg-2 &__frame {
+    background-image: url('/src/assets/images/brand/bg/bg-2.webp');
+  }
+
+  &--bg-3 &__frame {
+    background-image: url('/src/assets/images/brand/bg/bg-3.webp');
+  }
+
+  &__legend {
+    @include font(12px, 1.2);
+
+    @include media-breakpoint-up(sm) {
+      @include font(16px, 1.2);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font(12px, 1.2);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(16px, 1.2);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include font(16px, 1.2, 600);
+    }
+  }
+
+  &__value {
+    display: block;
+    padding-top: 10px;
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 0;
+    }
+  }
+}

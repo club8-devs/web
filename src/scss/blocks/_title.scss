@@ -1,0 +1,23 @@
+.title {
+  @include font(34px, 1.2, 700);
+
+  @include media-breakpoint-up(sm) {
+    @include font(60px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include font(60px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include font(90px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include font(100px, 1.2, 700);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    @include font(124px, 1.2, 700);
+  }
+}
